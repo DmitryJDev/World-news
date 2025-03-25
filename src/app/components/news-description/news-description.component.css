@@ -1,0 +1,45 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+.source {
+  font-style: italic;
+  color: #555;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+.content {
+  margin-top: 20px;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.description{
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.description-img{
+width: 100%;
+
+}
+.description-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+        text-align: center;
+}
+@media (min-width: 800px)  {
+    .description-text{width: 50%;}
+    .description-img{width: 45%;}
+}

@@ -1,0 +1,110 @@
+.container {
+  padding: 20px;
+}
+.categories,
+.search {
+  margin: 30px 0;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+}
+
+.search input {
+  width: 250px;  
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search input:focus {
+  border-color: #005db8;
+}
+
+.search button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #005db8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #003f87;  
+  transform: scale(1.05);  
+}
+
+.search button:active {
+  background-color: #002c5f;  
+}
+
+.search button:focus {
+  outline: none;  
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.article {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  cursor: pointer;
+}
+.article img {
+  max-width: 100%;
+  height: auto;
+}
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:checked {
+  background-color: #005db8;
+  border-color: #005db8;
+}
+
+input.checked-class:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin: 2px auto;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 15px;
+}
+.inpFlex {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

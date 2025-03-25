@@ -1,0 +1,20 @@
+<div class="container" *ngIf="article">
+  <h1>{{ article.title }}</h1>
+  <p class="source">Source: {{ article.source.name }} | Published: {{ article.publishedAt | date }}</p>
+  <div class="description">
+    <div class="description-img">
+      <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="{{ article.title }}">
+    </div>
+    <div class="description-text">
+      <p>{{ article.description }}</p>
+      <div class="content" *ngIf="article.content">
+        <h3>Content:</h3>
+        <p>{{ article.content }}</p>
+      </div>
+      <a [href]="article.url"  >Read full article</a>
+      <p><a routerLink="/">Back to News</a></p>
+    </div>
+  </div>
+
+
+</div>

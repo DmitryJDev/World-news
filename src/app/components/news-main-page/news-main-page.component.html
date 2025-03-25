@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>World News</h1>
+    <div class="inpFlex">
+        <label for="All">
+            <input type="checkbox" [checked]="this.selectedCategory=='' " value="'All'" id="All"
+                (change)="changingCategory('')" [class.checked-class]="this.selectedCategory=='' " />All
+        </label>
+
+        <label *ngFor="let group of categories">
+            <input type="checkbox" [checked]="this.selectedCategory==group" [value]="group"
+                (change)="changingCategory( group)" [class.checked-class]="this.selectedCategory==group" /> {{
+            group
+            }}
+        </label>
+    </div>
+
+    <div class="search">
+        <input type="text" #searchQuery placeholder="Search news..." (keyup.enter)="onSearch(searchQuery.value)">
+        <button (click)="onSearch(searchQuery.value)">Search</button>
+    </div>
+
+
+    <div class="news-list">
+        <div class="article" *ngFor="let article of articles" (click)="viewDetails(article)">
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.description }}</p>
+            <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="Article image">
+        </div>
+    </div>
+</div>
